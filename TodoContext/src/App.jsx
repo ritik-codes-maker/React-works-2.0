@@ -41,8 +41,11 @@ function App() {
                   <div className="mb-4">
                      <TodoForm/>
                   </div>
-                  <div className="flex flex-wrap gap-y-3">
-                    {(todos && todos.length > 0 ) && todos.map((todo) =>  (<TodoItem key={todo.id} todo={todo}/>))}
+                  <div className="w-full flex flex-wrap gap-y-3">
+                    {(todos && todos.length > 0 ) 
+                      && todos.map((todo) =>  {
+                      return (<TodoItem key={todo.id} todo={todo}/>)}
+                    )}
                   </div>
               </div>
         </div>
